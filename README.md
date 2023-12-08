@@ -1,5 +1,6 @@
 TC - Productivity Timer V0.1 
-A python Productivity Timer 
+A python Productivity Timer.
+
 This is the first code I have shared on Github so please be gentle. 
 
 I needed a timer for my productivity when making presets to keep me on track to 10 minutes a preset for my site presetfood.com 
