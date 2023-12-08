@@ -12,7 +12,7 @@ you will need to have PyQt Installed and pyinstaller
 this is the bash command i used to make the executible on my mac.
 pyinstaller --onefile --noconsole --exclude-module PyQt5.QtNetwork --exclude-module PyQt5.QtSql PyQt_Countdown.py
 
-It should be cross platoform if you compile on your platform 
+It should be cross platform if you compile on your platform 
 
 ![Screenshot](Screenshot.png)
 ![Screenshot](Screenshot2.png)
