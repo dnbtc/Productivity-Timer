@@ -8,7 +8,6 @@ from PyQt5.QtGui import QFont
 class CountdownTimer(QWidget):
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
     def initUI(self):
@@ -33,12 +32,17 @@ class CountdownTimer(QWidget):
         self.set_time_button = QPushButton('Set Time', self)
         self.set_time_button.clicked.connect(self.setTimeDialog)
 
+        # Add a reset button
+        self.reset_button = QPushButton('Reset', self)
+        self.reset_button.clicked.connect(self.resetTimer)
+
         # Set up the layout
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
         layout.addWidget(self.start_button)
         layout.addWidget(self.stop_button)
         layout.addWidget(self.set_time_button)
+        layout.addWidget(self.reset_button)  # Add the reset button to the layout
 
         # Set the initial window properties
         self.setGeometry(300, 300, 300, 200)
@@ -99,6 +103,12 @@ class CountdownTimer(QWidget):
         self.time_left = new_time
         self.label.setText(self.time_left.toString("mm:ss.zzz")[0:8])
         dialog.accept()
+
+    def resetTimer(self):
+        # Reset the timer to its initial state
+        self.stopTimer()
+        self.resetTime()
+        self.label.setText(self.time_left.toString("mm:ss.zzz")[0:8])
 
 if __name__ == '__main__':
     # Start the application
