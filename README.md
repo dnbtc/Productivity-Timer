@@ -14,6 +14,5 @@ pyinstaller --onefile --noconsole --exclude-module PyQt5.QtNetwork --exclude-mod
 
 It should be cross platform if you compile on your platform 
 
-![Screenshot](Screenshot.png)
 ![Screenshot](Screenshot2.png)
 
